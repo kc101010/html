@@ -1,0 +1,14 @@
+int clicks = 0
+
+Function Cookieclick()
+	int clicks += 1;
+
+
+
+
+
+
+
+
+
+(img src="cookie" onmouseclick="Function Cookieclick")

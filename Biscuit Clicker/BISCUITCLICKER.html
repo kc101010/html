@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title> BISCUIT CLICKER PROTOTYPE </title>
+		
+		<!-- THIS GAME/WEBSITE IS MAINLY DESIGNED FOR GOOGLE CHROME
+			
+			  Written by Kyle Christie
+			  
+			  THIS IS MY OWN CODE
+			  
+			  This was written during high school while messing around with HTML & JS
+
+
+		-->
+		
+		<style>
+			img{background-color:black; float:left;}
+			p, h1, footer{margin-right:1000px; background-color:pink; text-align:center; }
+			body{background-image:url("cookie-background.jpg")}
+			footer{padding:10px;}
+
+		</style>
+
+		
+
+	</head>
+
+	<body>
+		<h1> BISCUIT CLICKER </h1>
+	
+		<script type="text/javascript">
+
+			var clicks = 0;
+			var total = 0;
+			var autoClicks = 0;
+		
+			window.setTimeout(autoClick(), 1000);
+			
+		
+			
+			function cookieClick() {
+				document.getElementById("demo").innerHTML = "You have " + clicks + " clicks";
+				document.getElementById("totalClicks").innerHTML = "Your total amount of clicks is " + total;
+				
+			
+				clicks += 1;
+				while(click > 300){
+					clicks += 5
+				}
+
+				total = clicks;
+			}
+			
+			function autoClick(){
+				if ( clicks > 25){
+					cookieClick();
+					document.getElementById("demo1").innerHTML = "UPGRADE UNLOCKED";
+				}
+					
+				
+			}
+			
+				while(clicks > 50);{
+					setInterval(autoClick, 100);
+					
+				}
+			
+			
+			
+			
+			
+			
+			
+			/*
+				I have to figure out how to automate cookie clicking
+				when the user reaches a certain amount of clicks
+			
+			
+			//window.setInterval(autoClick, 1000);
+		
+			//function Timer(){
+			
+			//timer = setInterval(autoClick, 3000);
+		
+		}
+		
+			function autoClick(){
+				clicks + 10;
+			}
+
+			function cookieClick() {
+				
+				document.getElementById("demo").innerHTML = "You have " + clicks + " clicks";
+			
+				if (clicks >= 125){
+					clicks = clicks + 3;  
+					document.getElementById("demo1").innerHTML = "UPGRADE UNLOCKED";
+				}else{
+					clicks = clicks + 1;
+				
+				
+				
+				
+				
+				
+					
+			}
+		}*/
+		
+			
+		</script>
+
+
+
+
+
+		<img onclick = "cookieClick()" src="Pepperidge-Farm-Nantucket-Cookie.jpg" height="500" width="500" />
+		<p id ="demo"> You have 0 clicks </p>
+		<p id="demo1" >UPGRADE NOT UNLOCKED </p>
+		<p id="totalClicks"> Your total amount of clicks is 0 </p>
+		<footer> <b>Created by Kyle Christie</b> </footer>
+	</body>
+
+</html>
